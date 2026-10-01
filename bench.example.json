@@ -1,0 +1,5 @@
+{
+  "base_url": "https://your-endpoint.example/v1",
+  "api_key": "sk-REPLACE-ME",
+  "models": ["model-a", "model-b", "model-c"]
+}

@@ -1,0 +1,15 @@
+# Local secrets - never commit these
+bench.local.json
+.env
+*.key
+
+# Generated benchmark output (re-run it yourself instead)
+/results/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

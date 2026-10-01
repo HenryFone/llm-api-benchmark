@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "time": "2026-10-01 15:32:30",
+    "method": "input_tokens (含固定 ~520 注入提示)；看相对差异"
+  },
+  "tokens": {
+    "deepseek-v4-flash": {
+      "_base(x)": 522,
+      "zh_short": 525,
+      "zh_long": 587,
+      "en_short": 531,
+      "en_long": 574,
+      "code": 545,
+      "mix": 540
+    },
+    "deepseek-v4.1-flash": {
+      "_base(x)": 522,
+      "zh_short": 525,
+      "zh_long": 587,
+      "en_short": 531,
+      "en_long": 574,
+      "code": 545,
+      "mix": 540
+    },
+    "deepseek-v4-pro": {
+      "_base(x)": 575,
+      "zh_short": 578,
+      "zh_long": 640,
+      "en_short": 584,
+      "en_long": 627,
+      "code": 598,
+      "mix": 593
+    },
+    "glm-5.3-flash": {
+      "_base(x)": 519,
+      "zh_short": 522,
+      "zh_long": 584,
+      "en_short": 528,
+      "en_long": 572,
+      "code": 542,
+      "mix": 538
+    },
+    "glm-5.3": {
+      "_base(x)": 519,
+      "zh_short": 522,
+      "zh_long": 584,
+      "en_short": 528,
+      "en_long": 572,
+      "code": 542,
+      "mix": 538
+    },
+    "kimi-k3": {
+      "_base(x)": 573,
+      "zh_short": 576,
+      "zh_long": 636,
+      "en_short": 582,
+      "en_long": 626,
+      "code": 599,
+      "mix": 591
+    },
+    "minimax-m3": {
+      "_base(x)": 610,
+      "zh_short": 613,
+      "zh_long": 671,
+      "en_short": 619,
+      "en_long": 662,
+      "code": 636,
+      "mix": 628
+    }
+  },
+  "shapes": {
+    "deepseek-v4-flash": {
+      "zh_chars": 142,
+      "zh_tokens_net": 65,
+      "chars_per_token": 2.18,
+      "base_overhead": 522
+    },
+    "deepseek-v4.1-flash": {
+      "zh_chars": 142,
+      "zh_tokens_net": 65,
+      "chars_per_token": 2.18,
+      "base_overhead": 522
+    },
+    "deepseek-v4-pro": {
+      "zh_chars": 142,
+      "zh_tokens_net": 65,
+      "chars_per_token": 2.18,
+      "base_overhead": 575
+    },
+    "glm-5.3-flash": {
+      "zh_chars": 142,
+      "zh_tokens_net": 65,
+      "chars_per_token": 2.18,
+      "base_overhead": 519
+    },
+    "glm-5.3": {
+      "zh_chars": 142,
+      "zh_tokens_net": 65,
+      "chars_per_token": 2.18,
+      "base_overhead": 519
+    },
+    "kimi-k3": {
+      "zh_chars": 142,
+      "zh_tokens_net": 63,
+      "chars_per_token": 2.25,
+      "base_overhead": 573
+    },
+    "minimax-m3": {
+      "zh_chars": 142,
+      "zh_tokens_net": 61,
+      "chars_per_token": 2.33,
+      "base_overhead": 610
+    }
+  }
+}

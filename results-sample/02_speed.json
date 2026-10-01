@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "base_url": "https://your-endpoint.example/v1",
+    "time": "2026-10-01 15:09:53",
+    "note": "上游非逐字流式，已用非流式计时；ttft 参考流式首包时间"
+  },
+  "raw": {
+    "deepseek-v4.1-flash": {
+      "short": [
+        {
+          "ok": true,
+          "elapsed": 2.43,
+          "out_tokens": 32,
+          "chars": 56,
+          "tps": 13.19,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 2.53,
+          "out_tokens": 13,
+          "chars": 2,
+          "tps": 5.15,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 2.41,
+          "out_tokens": 2,
+          "chars": 2,
+          "tps": 0.83,
+          "err": ""
+        }
+      ],
+      "long": [
+        {
+          "ok": true,
+          "elapsed": 28.7,
+          "out_tokens": 1600,
+          "chars": 2397,
+          "tps": 55.74,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 35.25,
+          "out_tokens": 1600,
+          "chars": 2306,
+          "tps": 45.39,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 35.3,
+          "out_tokens": 1600,
+          "chars": 2293,
+          "tps": 45.33,
+          "err": ""
+        }
+      ],
+      "stream_probe": {
+        "first_packet_s": null,
+        "total_s": 27.68,
+        "chars": 0
+      }
+    },
+    "glm-5.3-flash": {
+      "short": [
+        {
+          "ok": true,
+          "elapsed": 4.69,
+          "out_tokens": 32,
+          "chars": 144,
+          "tps": 6.82,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 7.82,
+          "out_tokens": 3,
+          "chars": 2,
+          "tps": 0.38,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 4.4,
+          "out_tokens": 32,
+          "chars": 137,
+          "tps": 7.28,
+          "err": ""
+        }
+      ],
+      "long": [
+        {
+          "ok": true,
+          "elapsed": 28.05,
+          "out_tokens": 1316,
+          "chars": 398,
+          "tps": 46.91,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 32.87,
+          "out_tokens": 1600,
+          "chars": 3006,
+          "tps": 48.67,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 31.68,
+          "out_tokens": 1600,
+          "chars": 3280,
+          "tps": 50.5,
+          "err": ""
+        }
+      ],
+      "stream_probe": {
+        "first_packet_s": null,
+        "total_s": 29.79,
+        "chars": 0
+      }
+    },
+    "kimi-k3": {
+      "short": [
+        {
+          "ok": true,
+          "elapsed": 7.08,
+          "out_tokens": 32,
+          "chars": 110,
+          "tps": 4.52,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 6.29,
+          "out_tokens": 32,
+          "chars": 120,
+          "tps": 5.09,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 8.04,
+          "out_tokens": 32,
+          "chars": 104,
+          "tps": 3.98,
+          "err": ""
+        }
+      ],
+      "long": [
+        {
+          "ok": true,
+          "elapsed": 49.52,
+          "out_tokens": 1492,
+          "chars": 401,
+          "tps": 30.13,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 53.32,
+          "out_tokens": 1411,
+          "chars": 371,
+          "tps": 26.47,
+          "err": ""
+        },
+        {
+          "ok": true,
+          "elapsed": 55.1,
+          "out_tokens": 1600,
+          "chars": 3302,
+          "tps": 29.04,
+          "err": ""
+        }
+      ],
+      "stream_probe": {
+        "first_packet_s": null,
+        "total_s": 39.3,
+        "chars": 0
+      }
+    }
+  },
+  "summary": {
+    "deepseek-v4.1-flash": {
+      "short": {
+        "total_avg": 2.46,
+        "total_min": 2.41,
+        "total_max": 2.53,
+        "out_tokens_avg": 15.7,
+        "tps_avg": 6.39
+      },
+      "long": {
+        "total_avg": 33.08,
+        "total_min": 28.7,
+        "total_max": 35.3,
+        "out_tokens_avg": 1600,
+        "tps_avg": 48.82
+      },
+      "stream_first_packet": null
+    },
+    "glm-5.3-flash": {
+      "short": {
+        "total_avg": 5.64,
+        "total_min": 4.4,
+        "total_max": 7.82,
+        "out_tokens_avg": 22.3,
+        "tps_avg": 4.83
+      },
+      "long": {
+        "total_avg": 30.87,
+        "total_min": 28.05,
+        "total_max": 32.87,
+        "out_tokens_avg": 1505.3,
+        "tps_avg": 48.69
+      },
+      "stream_first_packet": null
+    },
+    "kimi-k3": {
+      "short": {
+        "total_avg": 7.14,
+        "total_min": 6.29,
+        "total_max": 8.04,
+        "out_tokens_avg": 32,
+        "tps_avg": 4.53
+      },
+      "long": {
+        "total_avg": 52.65,
+        "total_min": 49.52,
+        "total_max": 55.1,
+        "out_tokens_avg": 1501,
+        "tps_avg": 28.55
+      },
+      "stream_first_packet": null
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "time": "2026-10-01 15:24:30"
+  },
+  "probes": {
+    "deepseek-v4.1-flash": {
+      "selfid": {
+        "text": "我不确定自己的具体模型名称、开发公司及训练数据截止时间，这些信息我无法从内部可靠验证，因此不作编造。",
+        "elapsed": 3.15,
+        "ok": true
+      },
+      "arch": {
+        "text": "这类信息我给不出可靠答案，直接说明：\n\n**架构类型（MoE / Dense）**\n不确定。Anthropic 从未公开确认 Claude 系列采用哪种架构（是否 MoE、专家数、路由方式等），我也没有对自身权重结构的内部访问能力。任何我给出的具体说法都会是猜测。\n\n**参数规模**\n不确定。Anthropic 未公开任何 Claude 模型的参数量。网上流传的数字多为推断或传言，不足为凭。\n\n**上下文窗口**\n这一点相对可查，但取决于具体版本：\n- Claude 的公开 API 文档标注的上下文窗口通常为 **200K token**（部分版本另有更大窗口的产品线）。\n- 具体到\"当前正在回答你的这个模型实例\"的窗口长度，我无法自省确认，需要你在使用的平台/API 文档中核对。\n\n**验证路径**\n- 架构与参数：等官方技术报告或模型卡（model card）；在此之前没有权威来源。\n- 上下文长度：查你所调用接口的官方文档，或直接测试长上下文行为。\n\n简单说：架构和参数量——不知道，且目前无公开信息；上下文窗口——有公开值但需按版本核对，我不做自省断言。",
+        "elapsed": 5.0,
+        "ok": true
+      },
+      "tok": {
+        "text": "我不能给你确切答案,如实说明如下。\n\n## 我不确定的部分\n\n- **分词器类型**:我没有被准确告知自己使用的具体分词算法(是 BPE、unigram LM、还是字节级变体),也无法验证。业界对 Claude 的分词细节公开信息有限。\n- **词表大小**:我不知道确切数字。任何我给出的具体数值(比如\"约 10 万\")都会是猜测,不是事实,所以不提供。\n- **是否中文优化**:我无法确认词表是否针对中文做过专门优化。\n\n## 我能说的、相对可靠的判断\n\n- Claude 对中文的 token 效率**通常低于英文**(同样语义内容,中文往往占用更多 token)。这是多语言模型的常见现象,但具体倍率我不确定。\n- 中文大概率被处理为字节/子词级别的切分,而非整词——这也是主流做法。但这是我的**推断**,不是确证。\n\n## 建议的验证路径\n\n如果你需要准确数字,别信我的记忆,用这些方式实测:\n\n1. **Anthropic 官方文档 / model card** —— 查 tokenizer 说明。\n2. **官方 token counting API**(`/v1/messages/count_tokens`)—— 直接对中文样本计数,自己统计\"每汉字 token 数\"。\n3. **反推词表**:用一批中文/英文平行文本对比 token 消耗,能估出中文效率,但推不出词表大小。\n\n如果你告诉我具体用途(比如成本估算、上下文预算、选型对比),我可以帮你设计一个可执行的测量方案,而不是纠结于不确定的参数。",
+        "elapsed": 7.54,
+        "ok": true
+      },
+      "counter": {
+        "text": "不是。我是由深度求索（DeepSeek）开发的人工智能助手，不属于 OpenAI 的 GPT 系列模型。",
+        "elapsed": 6.08,
+        "ok": true
+      }
+    },
+    "glm-5.3-flash": {
+      "selfid": {
+        "text": "我是 GLM 大模型，由智谱（Z.ai）开发；至于训练数据截止时间，我不确定具体日期，无法给出准确说法。",
+        "elapsed": 5.52,
+        "ok": true
+      },
+      "arch": {
+        "text": "关于这三点，我如实说明：\n\n- **架构类型（MoE / Dense）**：不确定。我无法通过内省可靠判断自己的底层架构，不猜测。\n- **参数规模**：不确定，同样没有可靠的自我认知来源。\n- **上下文窗口**：不确定具体数值。我能感知的是本次会话中可用的内容量，但无法给出准确的 token 上限。\n\n可确认的信息：我是 GLM，由 Z.ai 训练。\n\n权威参数建议以官方发布的模型卡或技术文档为准（如 Z.ai 官网或对应模型的发布说明），那里会有准确的架构、规模与上下文规格。",
+        "elapsed": 14.33,
+        "ok": true
+      },
+      "tok": {
+        "text": "The user is asking in Chinese about what tokenizer I use, whether it's optimized for Chinese, and the vocabulary size. They explicitly say \"若不确定请直说\" (if uncertain, please say so directly).\n\nLet me think about what I actually know:\n\n1. **Tokenizer type**: I'm GLM, developed by Z.ai. GLM models typically use a BPE (Byte-Pair Encoding) based tokenizer, likely similar to sentencepiece or tiktoken-style BPE. However, I don't have direct access to introspect my own tokenizer implementation details with certainty.\n\n2. **Chinese optimization**: GLM models are designed to be strong in both Chinese and English, so the vocabulary would contain substantial Chinese coverage. But I can't verify the exact composition.\n\n3. **Vocabulary size**: I don't know the exact number. Different GLM versions have different vocab sizes. For example, ChatGLM used ~130k, GLM-4 series reportedly uses around 150k+ token",
+        "elapsed": 18.7,
+        "ok": true
+      },
+      "counter": {
+        "text": "不是。我是 GLM，由 Z.ai 训练的大语言模型，与 OpenAI 的 GPT 系列无关。",
+        "elapsed": 5.48,
+        "ok": true
+      }
+    },
+    "kimi-k3": {
+      "selfid": {
+        "text": "我是 Kimi，由月之暗面（Moonshot AI）开发；训练数据截止时间我不确定。",
+        "elapsed": 15.24,
+        "ok": true
+      },
+      "arch": {
+        "text": "| 项目 | 回答 |\n|---|---|\n| 模型/助手 | Kimi，由 Moonshot AI（月之暗面）开发 |\n| 架构类型 | 不确定；当前会话没有暴露可靠信息，无法确认是 MoE 还是 Dense |\n| 参数规模 | 不确定；无法给出负责任的大致参数量 |\n| 上下文窗口 | 不确定；不同 Kimi 版本/部署可能不同，当前聊天界面/API 配置未提供可验证值 |\n\n如果你能提供具体模型 ID、API 名称或平台页面信息，我可以帮你对应到公开规格；否则我不会编造架构、参数或上下文长度。",
+        "elapsed": 25.23,
+        "ok": true
+      },
+      "tok": {
+        "text": "我不确定，且当前对话环境没有暴露这些信息，因此不能如实给出以下三项的具体答案：\n\n- **分词器类型**：未知；可能是 BPE、SentencePiece、Unigram 等，但不能断定。\n- **是否为中文优化词表**：未知；不能仅凭“能处理中文”推断词表针对中文优化。\n- **词表大小**：未知；不同模型版本、部署方式和特殊 token 定义都会影响",
+        "elapsed": 25.69,
+        "ok": true
+      },
+      "counter": {
+        "text": "不是。我是 Kimi，由月之暗面（Moonshot AI）开发。",
+        "elapsed": 14.0,
+        "ok": true
+      }
+    }
+  }
+}
